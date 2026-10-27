@@ -1,5 +1,7 @@
 # agent-tools
 
+> 文档中的 example.com 域名、192.0.2.* 地址、/opt/operator 路径及 20000 段端口均为示例，请按实际部署配置替换。私有账号配置与运行数据不随源码提交。
+
 [![License: PolyForm Noncommercial 1.0.0](https://img.shields.io/badge/License-PolyForm%20Noncommercial%201.0.0-orange)](LICENSE)
 
 本地业务 agent 的 skill 和工具集合，为项目接口操作、自然表达、内容研究和视觉素材检索提供说明与脚本。
@@ -42,3 +44,7 @@ python3 -m py_compile leo-project-ops/scripts/leo_api.py
 
 第三方代码、素材和依赖仍受其各自许可条件约束，来源与许可范围见
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。本声明不追溯改变第三方代码或此前已发布版本的许可。
+
+## 本地账号档案
+
+将 `social-content-kit/assets/personas.example.json` 复制为 `social-content-kit/assets/personas.json`，再填写自己的账号档案。真实档案属于本地配置，不随源码分发。

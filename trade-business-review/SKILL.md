@@ -31,6 +31,6 @@ description: 交易·经营分析·分析经营反馈。依据闲鱼账号可读
 
 本技能独立可用；已挂载 `trade-product-present` 时可复用实物展示方法，已挂载 `platform-xianyu` 时可复用闲鱼措辞，无需它们也要保留本技能的事实和执行约束。
 
-工作台源码位于 `/home/ubuntu/leo-project/xianyu/web/`：先读 `app.py` 对应路由、`service.py` 对应方法，平台动作再核对 `platform.py`；不存在时报告运行环境缺少适配器，不凭空执行。使用任务已有的鉴权 HTTP 客户端或连接器，不读会话文件、不打印凭据。当前 `leo-project-ops` 的旧调用器将闲鱼标为 SDK，不能假定它能直调这些 Web 路由。
+工作台源码位于 `/opt/operator/leo-project/xianyu/web/`：先读 `app.py` 对应路由、`service.py` 对应方法，平台动作再核对 `platform.py`；不存在时报告运行环境缺少适配器，不凭空执行。使用任务已有的鉴权 HTTP 客户端或连接器，不读会话文件、不打印凭据。当前 `leo-project-ops` 的旧调用器将闲鱼标为 SDK，不能假定它能直调这些 Web 路由。
 
 执行账号来自任务绑定，调用使用 `X-Account-ID` 和 `X-Execution-Account` 指向同一账号；写请求还需 `X-App-Request: 1`、同源和现有登录态。创建技能或内容草稿不授权现在发布或发送；已有明确操作授权则直接执行，不重复询问。真实操作绑定一次稳定 `request_id`，查任务与回执；排队不是成功，超时或 unknown 时先核对，不自动重试。

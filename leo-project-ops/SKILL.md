@@ -3,17 +3,17 @@ name: leo-project-ops
 description: 操作本机 leo-project 的抖音、票务、闲鱼、模型服务、Multica 和门户；提供现有接口定位、鉴权调用、状态核对与运维入口。
 ---
 
-工作根目录 `/home/ubuntu/leo-project`。先按当前用户请求选择项目，读取该项目 AGENTS.md（若存在）及 [references/projects.md](references/projects.md) 对应部分。接口以当前代码为准，备份目录不是活动项目。
+工作根目录 `/opt/operator/leo-project`。先按当前用户请求选择项目，读取该项目 AGENTS.md（若存在）及 [references/projects.md](references/projects.md) 对应部分。接口以当前代码为准，备份目录不是活动项目。
 
 统一调用工具（绝对路径，可从任意任务目录运行）：
 
 ```bash
-python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py list
-python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py status
-python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py routes douyin
-python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py call douyin /api/meta
-python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py call ticket /api/state
-python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py call model-bridge /api/models
+python3 /opt/operator/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py list
+python3 /opt/operator/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py status
+python3 /opt/operator/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py routes douyin
+python3 /opt/operator/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py call douyin /api/meta
+python3 /opt/operator/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py call ticket /api/state
+python3 /opt/operator/leo-project/agent-tools/leo-project-ops/scripts/leo_api.py call model-bridge /api/models
 ```
 
 写操作：`call <project> <path> --method POST|PATCH|PUT|DELETE --execute --body-file <JSON文件或->`。正文用 stdin 或当前任务的私有临时文件传入。工具处理抖音 Origin、票务页面令牌、模型服务既有配置登录及 Multica task 鉴权；凭据不写入平台配置或工具输出，写请求不自动重试。工具的脱敏不是所有业务内容的匿名化；不要把大批联系人、证件或完整聊天记录直接回传。

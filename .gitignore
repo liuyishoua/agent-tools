@@ -30,3 +30,6 @@ docs/acceptance.json
 docs/previews/*production*
 
 workspace-previews/
+
+# Private operator configuration and local validation records
+/social-content-kit/assets/personas.json

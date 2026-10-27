@@ -1,0 +1,12 @@
+{
+  "example": {
+    "name": "示例创作者",
+    "identity": "请在本地填写真实账号资料",
+    "preferences": [],
+    "known_facts": [],
+    "unknown_facts": [],
+    "boundaries": [
+      "不虚构账号事实"
+    ]
+  }
+}

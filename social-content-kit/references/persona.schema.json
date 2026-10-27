@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AccountPersona",
+  "type": "object",
+  "required": [
+    "name",
+    "identity",
+    "preferences",
+    "attitudes",
+    "voice",
+    "known_facts",
+    "unknown_facts",
+    "boundaries"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "identity": {
+      "type": "string",
+      "description": "主人确认的稳定身份；不补未知履历"
+    },
+    "preferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "attitudes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "遇到取舍时偏向什么；不能只有语气词"
+    },
+    "voice": {
+      "type": "string"
+    },
+    "known_facts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unknown_facts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "boundaries": {
+      "type": "string"
+    },
+    "profile_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "visual_identity": {
+      "type": "object",
+      "properties": {
+        "reference_assets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "creative_settings": {
+      "type": "object",
+      "description": "明确为虚拟创作设定，不能当现实亲历"
+    }
+  },
+  "additionalProperties": false
+}

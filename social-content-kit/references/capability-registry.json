@@ -1,0 +1,227 @@
+{
+  "version": 2,
+  "naming": "业务域·能力类别·具体任务",
+  "skills": [
+    {
+      "slug": "social-creation-person",
+      "legacy_slug": "content-self-presentation",
+      "title": "社交·作品创作·人物图文",
+      "domain": "社交账号经营",
+      "category": "作品创作",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-creation-scene",
+      "legacy_slug": "content-place-story",
+      "title": "社交·作品创作·场景图文",
+      "domain": "社交账号经营",
+      "category": "作品创作",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-creation-story",
+      "legacy_slug": "content-daily-story",
+      "title": "社交·作品创作·日常故事",
+      "domain": "社交账号经营",
+      "category": "作品创作",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-creation-guide",
+      "legacy_slug": "content-experience-guide",
+      "title": "社交·作品创作·经验攻略",
+      "domain": "社交账号经营",
+      "category": "作品创作",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-creation-trend",
+      "legacy_slug": "content-trend-remix",
+      "title": "社交·作品创作·热点改编",
+      "domain": "社交账号经营",
+      "category": "作品创作",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-interaction-dialogue",
+      "legacy_slug": "content-social-reply",
+      "title": "社交·社交互动·回应对话",
+      "domain": "社交账号经营",
+      "category": "社交互动",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "trade-product-present",
+      "legacy_slug": "content-item-showcase",
+      "title": "交易·商品管理·展示商品",
+      "domain": "商品交易经营",
+      "category": "商品管理",
+      "layer": "业务任务",
+      "namespace": "交易"
+    },
+    {
+      "slug": "common-material-find",
+      "legacy_slug": "content-visual-asset-scout",
+      "title": "通用·素材处理·查找图片",
+      "domain": "共享方法",
+      "category": "素材处理",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "common-material-edit",
+      "legacy_slug": "content-visual-remix",
+      "title": "通用·素材处理·改造图片",
+      "domain": "共享方法",
+      "category": "素材处理",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "common-research-scenes",
+      "legacy_slug": "content-lived-scene-research",
+      "title": "通用·资料研究·研究生活场景",
+      "domain": "共享方法",
+      "category": "资料研究",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "common-expression-reference",
+      "legacy_slug": "content-reference-writing",
+      "title": "通用·表达方法·提炼参考文风",
+      "domain": "共享方法",
+      "category": "表达方法",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "common-expression-polish",
+      "legacy_slug": "content-grounded-humanize",
+      "title": "通用·表达方法·润色文案",
+      "domain": "共享方法",
+      "category": "表达方法",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "common-research-trends",
+      "legacy_slug": "content-trend-radar",
+      "title": "通用·资料研究·研究热点",
+      "domain": "共享方法",
+      "category": "资料研究",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "social-planning-topics",
+      "title": "社交·内容策划·安排选题",
+      "domain": "社交账号经营",
+      "category": "内容策划",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-quality-check",
+      "title": "社交·内容验收·检查图文",
+      "domain": "社交账号经营",
+      "category": "内容验收",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-growth-review",
+      "title": "社交·账号成长·复盘表现",
+      "domain": "社交账号经营",
+      "category": "账号成长",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "social-growth-memory",
+      "title": "社交·账号成长·整理记忆",
+      "domain": "社交账号经营",
+      "category": "账号成长",
+      "layer": "业务任务",
+      "namespace": "社交"
+    },
+    {
+      "slug": "trade-product-create",
+      "title": "交易·商品管理·创建商品",
+      "domain": "商品交易经营",
+      "category": "商品管理",
+      "layer": "业务任务",
+      "namespace": "交易"
+    },
+    {
+      "slug": "trade-product-maintain",
+      "title": "交易·商品管理·维护商品信息",
+      "domain": "商品交易经营",
+      "category": "商品管理",
+      "layer": "业务任务",
+      "namespace": "交易"
+    },
+    {
+      "slug": "trade-buyer-dialogue",
+      "title": "交易·买家沟通·解答咨询与议价",
+      "domain": "商品交易经营",
+      "category": "买家沟通",
+      "layer": "业务任务",
+      "namespace": "交易"
+    },
+    {
+      "slug": "trade-business-review",
+      "title": "交易·经营分析·分析经营反馈",
+      "domain": "商品交易经营",
+      "category": "经营分析",
+      "layer": "业务任务",
+      "namespace": "交易"
+    },
+    {
+      "slug": "platform-xhs",
+      "title": "平台·小红书·适配交付",
+      "domain": "平台适配",
+      "category": "小红书",
+      "layer": "平台适配",
+      "namespace": "平台"
+    },
+    {
+      "slug": "platform-xianyu",
+      "title": "平台·闲鱼·适配交付",
+      "domain": "平台适配",
+      "category": "闲鱼",
+      "layer": "平台适配",
+      "namespace": "平台"
+    },
+    {
+      "slug": "social-content-kit",
+      "title": "通用·任务调度·选择业务技能",
+      "domain": "共享方法",
+      "category": "任务调度",
+      "layer": "调度入口",
+      "namespace": "通用"
+    },
+    {
+      "slug": "gifgrep",
+      "title": "通用·素材处理·搜索表情",
+      "domain": "共享方法",
+      "category": "素材处理",
+      "layer": "辅助方法",
+      "namespace": "通用"
+    },
+    {
+      "slug": "social-growth-explore",
+      "title": "社交·账号成长·主动探索",
+      "domain": "社交账号经营",
+      "category": "账号成长",
+      "layer": "业务任务",
+      "namespace": "社交"
+    }
+  ]
+}

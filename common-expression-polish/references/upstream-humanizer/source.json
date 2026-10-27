@@ -1,0 +1,60 @@
+{
+  "source_url": "https://github.com/ai-zixun/humanizer-zh",
+  "commit": "f75f1ac9735c4f10da1bba0148e0ea7228c5c3b3",
+  "license": "MIT",
+  "license_url": "https://github.com/ai-zixun/humanizer-zh/blob/f75f1ac9735c4f10da1bba0148e0ea7228c5c3b3/LICENSE",
+  "retrieved_at": "2026-10-11T09:17:10.768173+00:00",
+  "reviewed_files": [
+    {
+      "path": "SKILL.md",
+      "url": "https://github.com/ai-zixun/humanizer-zh/blob/f75f1ac9735c4f10da1bba0148e0ea7228c5c3b3/SKILL.md",
+      "sha256": "d7ef1115ef9f05697bf08dc0218983e0c8fcb472e5c33eb4bb1d6faa200c0a32"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://github.com/ai-zixun/humanizer-zh/blob/f75f1ac9735c4f10da1bba0148e0ea7228c5c3b3/LICENSE",
+      "sha256": "609132fb364baa7688c086c5baa267ebb88edf32ea431d2dbf3e745d39576d3f"
+    },
+    {
+      "path": "references/patterns.md",
+      "url": "https://github.com/ai-zixun/humanizer-zh/blob/f75f1ac9735c4f10da1bba0148e0ea7228c5c3b3/references/patterns.md",
+      "sha256": "d65f714ea6f160cfb030c374ad33bf77f15a86c70ee82a4d18236a8ac0ff6491"
+    }
+  ],
+  "adopted": [
+    "Chinese sentence diagnostics from patterns.md sections 1–9 and 12–13.",
+    "Meaning/fact preservation and diagnose-before-rewrite workflow."
+  ],
+  "overrides": [
+    "No named-author voices or voice-adoption prompt.",
+    "No mandatory long-form structure, global punctuation ban, or terminology overrides.",
+    "Account persona, task facts and ContentPackage contract take precedence."
+  ],
+  "selection": {
+    "sentence-diagnostics.md": {
+      "upstream_path": "references/patterns.md",
+      "sections": [
+        "## 1. 机械对照句",
+        "## 2. 翻译腔连接词",
+        "## 3. 空泛大词",
+        "## 4. 段落结尾的口号化收束",
+        "## 5. 列表和排比成瘾",
+        "## 6. 冒号、破折号和引号",
+        "## 7. 营销稿与官样文章腔",
+        "## 8. 过度谨慎或过度确定",
+        "## 9. 开头、主体、结尾脱节",
+        "## 12. 章末段末的预告式收束",
+        "## 13. 抽象转义与重锤句"
+      ],
+      "changes": [
+        "Added selection header.",
+        "Changed one relative SKILL.md link to fixed-commit upstream URL."
+      ]
+    }
+  },
+  "files_hashes": {
+    "LICENSE": "609132fb364baa7688c086c5baa267ebb88edf32ea431d2dbf3e745d39576d3f",
+    "sentence-diagnostics.md": "c195be7ec288c12baed5e55c015c8f1830f27339072dc2f92f050d31d905a749"
+  },
+  "execution": "No upstream scripts were executed; no dependencies were installed."
+}

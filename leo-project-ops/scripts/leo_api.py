@@ -37,6 +37,10 @@ PROJECTS['channel']={'base':'http://127.0.0.1:8780','health':'/login','origin':'
     'source':'channel/channel_service/app.py','directory':'channel','workspace':True,
     'password_file':'channel/.local/admin-password','mode':'durable queue; Multica agents; outputs for review'}
 
+PROJECTS['xianyu-workbench']={'base':'http://127.0.0.1:8770','health':'/login','origin':'https://d.58nft.net:9448',
+    'source':'xianyu/web/app.py','directory':'xianyu','workspace':True,
+    'mode':'authenticated workbench; account selection required for account-scoped operations'}
+
 SECRET = re.compile(r'(?i)(password|passwd|cookie|authorization|private.?key|secret|access.?token|refresh.?token|api.?key|csrf|ticket|^token$)')
 
 def redact(value):
@@ -67,7 +71,7 @@ def raw(base, path, method='GET', payload=None, headers=None, timeout=30, opener
     except urllib.error.HTTPError as exc:
         return exc.code, exc.headers.get('Content-Type', ''), exc.read(65536)
 
-def api(project, path, method='GET', payload=None):
+def api(project, path, method='GET', payload=None, account_id=None):
     spec = PROJECTS[project]
     if project in ('bifrost', 'xianyu'):
         raise ValueError('This project uses its documented HTML/file or Python interfaces; see references/projects.md')
@@ -75,17 +79,26 @@ def api(project, path, method='GET', payload=None):
             (project == 'model-bridge' and path == '/health')):
         raise ValueError('Use a documented /api/ path')
     headers = {'Content-Type': 'application/json'}
+    if account_id is not None:
+        account = str(account_id)
+        if not account or len(account)>160 or any(ord(c)<32 for c in account):
+            raise ValueError('Invalid execution account')
+        headers['X-Account-ID']=account
+        headers['X-Execution-Account']=account
     workspace_opener=None
     if spec.get('workspace'):
         workspace_cookies=http.cookiejar.CookieJar()
         workspace_opener=urllib.request.build_opener(urllib.request.ProxyHandler({}),NoRedirect(),urllib.request.HTTPCookieProcessor(workspace_cookies))
         headers.update({'Origin':spec['origin'],'X-App-Request':'1'})
         password_path=ROOT/spec.get('password_file',spec['directory']+'/.local/web/admin-password')
-        if not password_path.is_file(): raise ValueError('Workspace password file is not available')
-        status,_,_=raw(spec['base'],'/api/login','POST',{'password':password_path.read_text().strip()},headers,opener=workspace_opener)
-        if status!=200: raise ValueError('Workspace configured password login failed')
-        # The browser cookie is Secure; this trusted CLI talks only to the fixed loopback listener.
-        headers['Cookie']='; '.join(cookie.name+'='+cookie.value for cookie in workspace_cookies)
+        machine_path=password_path.with_name('workspace-machine-key')
+        if machine_path.is_file():
+            headers['X-Ops-Machine-Key']=machine_path.read_text().strip()
+        else:
+            if not password_path.is_file(): raise ValueError('Workspace password file is not available')
+            status,_,_=raw(spec['base'],'/api/login','POST',{'password':password_path.read_text().strip()},headers,opener=workspace_opener)
+            if status!=200: raise ValueError('Workspace configured password login failed')
+            headers['Cookie']='; '.join(cookie.name+'='+cookie.value for cookie in workspace_cookies)
     elif project == 'douyin':
         headers.update({'Origin': spec['origin'], 'X-App-Request': '1'})
     elif project == 'ticket' and method != 'GET':

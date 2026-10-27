@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "EvidencePack": {
+    "source_refs": [{"source_url": "https://...", "published_at": null, "accessed_at": "ISO8601", "observations": [], "usage": "facts|language|structure|visual_reference|reusable_asset", "access_scope": "full|partial|snippet|unavailable", "read_scope_note": "实际读取范围"}]
+  },
+  "StyleCard": {"structure": [], "rhythm": [], "lexicon": [], "avoid": [], "examples": [], "source_refs": []},
+  "ContentPackage": {
+    "title": "", "body": "", "media": [{"path": "", "source_url": "", "origin": "owner|licensed|generated", "usage_rights": "", "generated_label_required": false, "viewed": false}],
+    "source_refs": [], "claims": [{"text": "", "basis": "", "kind": "verified_fact|preference|creative"}],
+    "quality": {"status": "ready|hold", "observations": [], "missing": []}
+  },
+  "DialogueContext": {"messages": [], "confirmed_memories": [], "shared_references": [], "automated_message_ids": [], "relationship": "", "current_fact_limits": []}
+}

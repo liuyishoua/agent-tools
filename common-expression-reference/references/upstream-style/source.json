@@ -1,0 +1,65 @@
+{
+  "source_url": "https://github.com/snowmays/style-alchemy",
+  "commit": "b17cfa6e23433ac0e44ca6d899ac9922aaa0b240",
+  "license": "MIT",
+  "license_url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/LICENSE",
+  "retrieved_at": "2026-10-11T09:17:10.772054+00:00",
+  "reviewed_files": [
+    {
+      "path": "SKILL.md",
+      "url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/SKILL.md",
+      "sha256": "82a6eee830c193305b5b7184924681e298a4988276870ccc5b1f1b85922e9f74"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/LICENSE",
+      "sha256": "457c14a8f81c0fc8901cc8920acdf0e152bddbb2aca65fc8d33976ed90ee54ea"
+    },
+    {
+      "path": "references/style-profile-schema.md",
+      "url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/references/style-profile-schema.md",
+      "sha256": "97e032909b9ffe511e5ecf39930577a00a94bf3777723981347578aed751c278"
+    },
+    {
+      "path": "references/sample-format.md",
+      "url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/references/sample-format.md",
+      "sha256": "c04746dac62e259e67d129b882dd319d10d24bb886bee8460f5cbf992c672566"
+    },
+    {
+      "path": "references/analysis-framework.md",
+      "url": "https://github.com/snowmays/style-alchemy/blob/b17cfa6e23433ac0e44ca6d899ac9922aaa0b240/references/analysis-framework.md",
+      "sha256": "286ec7e78e76e25b8783e7d82715ed06d8710665f8d5d9d7d98f6cc8e40c4ca8"
+    }
+  ],
+  "adopted": [
+    "Five dimensions: title, opening, rhythm, language and ending.",
+    "Structured profile template and evidence-backed field filling.",
+    "Measured counts only; omit unobserved fields."
+  ],
+  "overrides": [
+    "Map the profile to the shared StyleCard instead of requiring a long report.",
+    "No intake confirmation gate, fixed minimum sample count, mandatory verb count or default length/emoji.",
+    "No upstream scripts, installation, author identity injection or automatic skill generation."
+  ],
+  "selection": {
+    "analysis-five-dimensions.md": {
+      "upstream_path": "references/analysis-framework.md",
+      "sections": [
+        "## 3. 通用五维分析"
+      ],
+      "changes": [
+        "Added selection header."
+      ]
+    },
+    "style-profile-schema.md": {
+      "upstream_path": "references/style-profile-schema.md",
+      "changes": []
+    }
+  },
+  "files_hashes": {
+    "LICENSE": "457c14a8f81c0fc8901cc8920acdf0e152bddbb2aca65fc8d33976ed90ee54ea",
+    "analysis-five-dimensions.md": "c889e0cc83f72f10e9c8c9c0e1eccc5ea65452689b1530390b575760e3f0085b",
+    "style-profile-schema.md": "97e032909b9ffe511e5ecf39930577a00a94bf3777723981347578aed751c278"
+  },
+  "execution": "No upstream scripts were executed; no dependencies were installed."
+}

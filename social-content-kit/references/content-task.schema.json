@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SocialContentTask",
+  "type": "object",
+  "required": ["task_id", "account_id", "persona_ref", "platform", "scene", "goal", "facts", "assets", "output"],
+  "properties": {
+    "task_id": {"type": "string", "minLength": 1},
+    "account_id": {"type": "string", "minLength": 1},
+    "persona_ref": {"type": "string", "minLength": 1, "description": "账号系统人设的引用，不从参考帖反推身份"},
+    "platform": {"enum": ["xhs", "xianyu"]},
+    "scene": {"enum": ["self", "place", "daily", "guide", "item", "trend", "reply"]},
+    "goal": {"type": "string", "minLength": 1},
+    "facts": {"type": "array", "items": {"type": "object", "required": ["claim", "basis"], "properties": {"claim": {"type": "string"}, "basis": {"type": "string"}}, "additionalProperties": false}},
+    "assets": {"type": "array", "items": {"type": "object", "required": ["path", "origin"], "properties": {"path": {"type": "string"}, "origin": {"enum": ["owner", "licensed", "generated"]}, "source_url": {"type": "string"}, "usage_rights": {"type": "string"}, "generated_label_required": {"type": "boolean"}}, "additionalProperties": false}},
+    "evidence": {"type": "array", "description": "EvidencePack；外部经历不能升级成本人事实", "items": {"type": "object"}},
+    "style_reference": {"type": "object", "description": "StyleCard，与personality分开"},
+    "dialogue": {"type": "object", "description": "DialogueContext；仅当前账号与联系人范围"},
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "output": {"enum": ["content_package", "plain_reply", "workbench_post", "workbench_review", "workbench_comment", "workbench_dm"]}
+  },
+  "additionalProperties": false
+}

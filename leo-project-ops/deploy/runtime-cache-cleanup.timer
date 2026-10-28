@@ -1,0 +1,9 @@
+[Unit]
+Description=Periodically bound AI task metadata cache storage
+[Timer]
+OnBootSec=30min
+OnUnitActiveSec=6h
+RandomizedDelaySec=15min
+Persistent=true
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Prune regenerable AI task metadata caches
+[Service]
+Type=oneshot
+User=ubuntu
+ExecStart=/usr/bin/python3 /home/ubuntu/leo-project/agent-tools/leo-project-ops/scripts/runtime_cache_cleanup.py --execute --age-hours 24
+UMask=0077
+NoNewPrivileges=true
+Nice=15
+IOSchedulingClass=idle
